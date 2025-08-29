@@ -43,3 +43,20 @@ function updateCart() {
 
   cartTotal.textContent = total.toFixed(2);
 }
+// Form validation
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = this.querySelector('input[type="text"]').value.trim();
+  const email = this.querySelector('input[type="email"]').value.trim();
+  const message = this.querySelector('textarea').value.trim();
+
+  if (!name || !email || !message) {
+    alert("❗ Please fill out all fields.");
+    return;
+  }
+
+  // Simulated AJAX form submission
+  alert(`✅ Thanks, ${name}! Your message has been sent.`);
+  this.reset();
+});
