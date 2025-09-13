@@ -1,32 +1,29 @@
-// Menu data (this would eventually come from a server via AJAX)
-const menu = [
-  { id: 1, name: 'Burger', price: 5.99 },
-  { id: 2, name: 'Pizza', price: 8.99 },
-  { id: 3, name: 'Tacos', price: 6.49 }
-];
-
 const menuContainer = document.querySelector('.menu-items');
 const cartItems = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 
 let cart = [];
 
-// Display menu items
-menu.forEach(item => {
-  const div = document.createElement('div');
-  div.className = 'menu-item';
-  div.innerHTML = `
-    <h3>${item.name}</h3>
-    <p>$${item.price.toFixed(2)}</p>
-    <button onclick="addToCart(${item.id})">Add to Cart</button>
-  `;
-  menuContainer.appendChild(div);
-});
+// Load menu items via AJAX (fetch API)
+fetch('menu.json')
+  .then(response => response.json())
+  .then(menu => {
+    menu.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'menu-item';
+      div.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <h3>${item.name}</h3>
+        <p>$${item.price.toFixed(2)}</p>
+        <button onclick="addToCart(${item.id}, '${item.name}', ${item.price})">Add to Cart</button>
+      `;
+      menuContainer.appendChild(div);
+    });
+  });
 
 // Add to cart
-function addToCart(itemId) {
-  const item = menu.find(m => m.id === itemId);
-  cart.push(item);
+function addToCart(itemId, itemName, itemPrice) {
+  cart.push({ id: itemId, name: itemName, price: itemPrice });
   updateCart();
 }
 
@@ -43,10 +40,10 @@ function updateCart() {
 
   cartTotal.textContent = total.toFixed(2);
 }
-// Form validation
+
+// Contact form validation (unchanged)
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
-
   const name = this.querySelector('input[type="text"]').value.trim();
   const email = this.querySelector('input[type="email"]').value.trim();
   const message = this.querySelector('textarea').value.trim();
@@ -56,7 +53,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     return;
   }
 
-  // Simulated AJAX form submission
   alert(`✅ Thanks, ${name}! Your message has been sent.`);
   this.reset();
 });
