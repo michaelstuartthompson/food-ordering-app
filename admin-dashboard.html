@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - GRUBSEE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .admin-panel {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    table th {
+      background: #f4f4f4;
+    }
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+    }
+    .btn-edit { background: #007bff; }
+    .btn-delete { background: #dc3545; }
+    .btn-logout {
+      display: inline-block;
+      margin-top: 10px;
+      background: #ff4c4c;
+      padding: 8px 14px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-panel">
+    <h2>🍽️ Admin Dashboard</h2>
+
+    <h3>Manage Menu Items</h3>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Burger</td>
+        <td>$5.99</td>
+        <td>
+          <button class="btn btn-edit">Edit</button>
+          <button class="btn btn-delete">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Pizza</td>
+        <td>$8.99</td>
+        <td>
+          <button class="btn btn-edit">Edit</button>
+          <button class="btn btn-delete">Delete</button>
+        </td>
+      </tr>
+    </table>
+
+    <h3>Recent Orders</h3>
+    <table>
+      <tr>
+        <th>Order ID</th>
+        <th>User</th>
+        <th>Items</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>John Doe</td>
+        <td>Burger, Tacos</td>
+        <td>Pending</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Jane Smith</td>
+        <td>Pizza</td>
+        <td>Completed</td>
+      </tr>
+    </table>
+
+    <a href="admin-login.html" class="btn-logout">Logout</a>
+  </div>
+
+</body>
+</html>
