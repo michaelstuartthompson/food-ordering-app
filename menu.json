@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Cheesy Grub-Burger",
+    "price": 10.99
+    "image": "images/cheeseburger.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Grub-Pizza",
+    "price": 19.99,
+    "image": "images/pizza.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Grub-Tacos",
+    "price": 9.49,
+    "image": "images/tacos.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Grub-Fries",
+    "price": 5.49,
+    "image": "images/fries.jpg"
+  },    
+  {
+    "id": 5,
+    "name": "Grub-Salad",
+    "price": 7.99,
+    "image": "images/salad.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Grub-Soda",
+    "price": 2.99,
+    "image": "images/soda.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Grub-Smoothie",
+    "price": 5.49,
+    "image": "images/smoothie.jpg"
+  },   
+  {
+    "id": 8,
+    "name": "Grub-White",
+    "price": 6.99,
+    "image": "images/white pizza.jpg"
+  }
+]
