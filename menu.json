@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Cheesy Grub-Burger",
-    "price": 10.99
+    "price": 10.99,
     "image": "images/cheeseburger.jpg"
   },
   {
@@ -12,7 +12,8 @@
     "image": "images/pizza.jpg"
   },
   {
-    "id": 3,same": "Grub-Tacos",
+    "id": 3,
+    "name": "Grub-Tacos",
     "price": 9.49,
     "image": "images/tacos.jpg"
   },
