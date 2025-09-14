@@ -12,8 +12,7 @@
     "image": "images/pizza.jpg"
   },
   {
-    "id": 3,
-    "name": "Grub-Tacos",
+    "id": 3,same": "Grub-Tacos",
     "price": 9.49,
     "image": "images/tacos.jpg"
   },
