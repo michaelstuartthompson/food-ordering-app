@@ -29,7 +29,7 @@
     "price": 7.99,
     "image": "images/salad.jpg"
   },
-  {
+  { 
     "id": 6,
     "name": "Grub-Soda",
     "price": 2.99,
